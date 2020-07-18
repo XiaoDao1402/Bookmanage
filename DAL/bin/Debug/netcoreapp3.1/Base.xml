@@ -1961,6 +1961,22 @@
             中文
             </summary>
         </member>
+        <member name="T:JW.Base.Lang.DisplayTextAttribute">
+            <summary>
+            显示文本
+            </summary>
+        </member>
+        <member name="P:JW.Base.Lang.DisplayTextAttribute.Text">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:JW.Base.Lang.DisplayTextAttribute.#ctor(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="text"></param>
+        </member>
         <member name="T:JW.Base.Lang.Encrypt.DataEncrypt">
             <summary>
             数据加密
@@ -2314,6 +2330,13 @@
             获取月份
             </summary>
             <param name="date"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JW.Base.Lang.ObjectHelper.ToDisplayText(System.Enum)">
+            <summary>
+            
+            </summary>
+            <param name="en"></param>
             <returns></returns>
         </member>
         <member name="M:JW.Base.Lang.ObjectHelper.IfNull``1(``0,``0)">
@@ -3027,6 +3050,47 @@
             <summary>
             释放
             </summary>
+        </member>
+        <member name="T:JW.Base.Xml.XmlHelper">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:JW.Base.Xml.XmlHelper.#cctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:JW.Base.Xml.XmlHelper.SerializeObject``1(``0)">
+            <summary>
+                XML序列化
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JW.Base.Xml.XmlHelper.SerializeObjectWithoutNamespace``1(``0)">
+            <summary>
+                序列化XML不带命名空间和定义
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JW.Base.Xml.XmlHelper.DeserializeObject``1(System.IO.Stream)">
+            <summary>
+                反序列化
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="stream"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JW.Base.Xml.XmlHelper.DeserializeObject``1(System.String)">
+            <summary>
+                反序列化
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="input"></param>
+            <returns></returns>
         </member>
     </members>
 </doc>

@@ -4,5 +4,42 @@
         <name>BookManage</name>
     </assembly>
     <members>
+        <member name="T:BookManage.Controllers.Book.BookController">
+            <summary>
+            图书管理
+            </summary>
+        </member>
+        <member name="M:BookManage.Controllers.Book.BookController.AddBook(Entity.BookEntity)">
+            <summary>
+            新增图书
+            </summary>
+            <param name="book"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BookManage.Controllers.Book.BookController.DeleteBook(System.Int32)">
+            <summary>
+            根据主键Id删除图书
+            </summary>
+            <param name="bookId"></param>
+        </member>
+        <member name="M:BookManage.Controllers.Book.BookController.UpdateBook(Entity.BookEntity,System.Int32)">
+            <summary>
+            根据主键Id修改图书信息
+            </summary>
+            <param name="book"></param>
+            <param name="bookId"></param>
+        </member>
+        <member name="M:BookManage.Controllers.Book.BookController.QueryBook">
+            <summary>
+            查询图书
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:bookmanage.Controllers.WeatherForecastController.#ctor(Microsoft.Extensions.Logging.ILogger{bookmanage.Controllers.WeatherForecastController})">
+            <summary>
+            
+            </summary>
+            <param name="logger"></param>
+        </member>
     </members>
 </doc>

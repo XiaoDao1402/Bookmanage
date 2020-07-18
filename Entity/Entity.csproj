@@ -9,6 +9,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="sqlSugarCore" Version="5.0.0.15" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\新焙时\JWBestPlatform\03.开发\01.基础平台\JW.Base\JW.Base.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Update="Entity.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

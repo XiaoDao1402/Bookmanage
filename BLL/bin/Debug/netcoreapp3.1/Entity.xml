@@ -4,5 +4,35 @@
         <name>Entity</name>
     </assembly>
     <members>
+        <member name="T:Entity.BookEntity">
+            <summary>
+            图书实体
+            </summary>
+        </member>
+        <member name="P:Entity.BookEntity.BookId">
+            <summary>
+            图书主键
+            </summary>
+        </member>
+        <member name="P:Entity.BookEntity.Name">
+            <summary>
+            图书名
+            </summary>
+        </member>
+        <member name="P:Entity.BookEntity.Price">
+            <summary>
+            图书价格
+            </summary>
+        </member>
+        <member name="P:Entity.BookEntity.CreateDate">
+            <summary>
+            创建日期
+            </summary>
+        </member>
+        <member name="P:Entity.BookEntity.ModifyDate">
+            <summary>
+            修改日期
+            </summary>
+        </member>
     </members>
 </doc>

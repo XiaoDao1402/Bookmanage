@@ -12,3 +12,17 @@ F:\项目\Bookmanage\DAL\obj\Debug\netcoreapp3.1\DAL.csproj.CopyComplete
 F:\项目\Bookmanage\DAL\obj\Debug\netcoreapp3.1\DAL.dll
 F:\项目\Bookmanage\DAL\obj\Debug\netcoreapp3.1\DAL.pdb
 F:\项目\Bookmanage\DAL\bin\Debug\netcoreapp3.1\Base.xml
+F:\项目\图书管理\DAL\obj\Debug\netcoreapp3.1\DAL.csprojAssemblyReference.cache
+F:\项目\图书管理\DAL\obj\Debug\netcoreapp3.1\DAL.AssemblyInfoInputs.cache
+F:\项目\图书管理\DAL\obj\Debug\netcoreapp3.1\DAL.AssemblyInfo.cs
+F:\项目\图书管理\DAL\obj\Debug\netcoreapp3.1\DAL.csproj.CoreCompileInputs.cache
+F:\项目\图书管理\DAL\obj\Debug\netcoreapp3.1\DAL.dll
+F:\项目\图书管理\DAL\obj\Debug\netcoreapp3.1\DAL.pdb
+F:\项目\图书管理\DAL\bin\Debug\netcoreapp3.1\Base.xml
+F:\项目\图书管理\DAL\bin\Debug\netcoreapp3.1\log4net.config
+F:\项目\图书管理\DAL\bin\Debug\netcoreapp3.1\DAL.deps.json
+F:\项目\图书管理\DAL\bin\Debug\netcoreapp3.1\DAL.dll
+F:\项目\图书管理\DAL\bin\Debug\netcoreapp3.1\DAL.pdb
+F:\项目\图书管理\DAL\bin\Debug\netcoreapp3.1\JW.Base.dll
+F:\项目\图书管理\DAL\bin\Debug\netcoreapp3.1\JW.Base.pdb
+F:\项目\图书管理\DAL\obj\Debug\netcoreapp3.1\DAL.csproj.CopyComplete

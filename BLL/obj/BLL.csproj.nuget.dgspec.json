@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "F:\\项目\\Bookmanage\\BLL\\BLL.csproj": {}
+    "F:\\项目\\图书管理\\BLL\\BLL.csproj": {}
   },
   "projects": {
-    "F:\\项目\\Bookmanage\\BLL\\BLL.csproj": {
+    "F:\\项目\\图书管理\\BLL\\BLL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\项目\\Bookmanage\\BLL\\BLL.csproj",
+        "projectUniqueName": "F:\\项目\\图书管理\\BLL\\BLL.csproj",
         "projectName": "BLL",
-        "projectPath": "F:\\项目\\Bookmanage\\BLL\\BLL.csproj",
-        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "F:\\项目\\Bookmanage\\BLL\\obj\\",
+        "projectPath": "F:\\项目\\图书管理\\BLL\\BLL.csproj",
+        "packagesPath": "C:\\Users\\JQ-KF 05\\.nuget\\packages\\",
+        "outputPath": "F:\\项目\\图书管理\\BLL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\JQ-KF 05\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -30,11 +30,14 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "F:\\项目\\Bookmanage\\DAL\\DAL.csproj": {
-                "projectPath": "F:\\项目\\Bookmanage\\DAL\\DAL.csproj"
+              "F:\\项目\\图书管理\\DAL\\DAL.csproj": {
+                "projectPath": "F:\\项目\\图书管理\\DAL\\DAL.csproj"
               },
-              "F:\\项目\\Bookmanage\\Entity\\Entity.csproj": {
-                "projectPath": "F:\\项目\\Bookmanage\\Entity\\Entity.csproj"
+              "F:\\项目\\图书管理\\Entity\\Entity.csproj": {
+                "projectPath": "F:\\项目\\图书管理\\Entity\\Entity.csproj"
+              },
+              "F:\\项目\\新焙时\\JWBestPlatform\\03.开发\\01.基础平台\\JW.Base\\JW.Base.csproj": {
+                "projectPath": "F:\\项目\\新焙时\\JWBestPlatform\\03.开发\\01.基础平台\\JW.Base\\JW.Base.csproj"
               }
             }
           }
@@ -62,24 +65,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "F:\\项目\\Bookmanage\\DAL\\DAL.csproj": {
+    "F:\\项目\\图书管理\\DAL\\DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\项目\\Bookmanage\\DAL\\DAL.csproj",
+        "projectUniqueName": "F:\\项目\\图书管理\\DAL\\DAL.csproj",
         "projectName": "DAL",
-        "projectPath": "F:\\项目\\Bookmanage\\DAL\\DAL.csproj",
-        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "F:\\项目\\Bookmanage\\DAL\\obj\\",
+        "projectPath": "F:\\项目\\图书管理\\DAL\\DAL.csproj",
+        "packagesPath": "C:\\Users\\JQ-KF 05\\.nuget\\packages\\",
+        "outputPath": "F:\\项目\\图书管理\\DAL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\JQ-KF 05\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -92,8 +95,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "F:\\项目\\JWBestPlatform\\03.开发\\01.基础平台\\JW.Base\\JW.Base.csproj": {
-                "projectPath": "F:\\项目\\JWBestPlatform\\03.开发\\01.基础平台\\JW.Base\\JW.Base.csproj"
+              "F:\\项目\\新焙时\\JWBestPlatform\\03.开发\\01.基础平台\\JW.Base\\JW.Base.csproj": {
+                "projectPath": "F:\\项目\\新焙时\\JWBestPlatform\\03.开发\\01.基础平台\\JW.Base\\JW.Base.csproj"
               }
             }
           }
@@ -127,24 +130,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "F:\\项目\\Bookmanage\\Entity\\Entity.csproj": {
+    "F:\\项目\\图书管理\\Entity\\Entity.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\项目\\Bookmanage\\Entity\\Entity.csproj",
+        "projectUniqueName": "F:\\项目\\图书管理\\Entity\\Entity.csproj",
         "projectName": "Entity",
-        "projectPath": "F:\\项目\\Bookmanage\\Entity\\Entity.csproj",
-        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "F:\\项目\\Bookmanage\\Entity\\obj\\",
+        "projectPath": "F:\\项目\\图书管理\\Entity\\Entity.csproj",
+        "packagesPath": "C:\\Users\\JQ-KF 05\\.nuget\\packages\\",
+        "outputPath": "F:\\项目\\图书管理\\Entity\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\JQ-KF 05\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -156,7 +159,11 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
-            "projectReferences": {}
+            "projectReferences": {
+              "F:\\项目\\新焙时\\JWBestPlatform\\03.开发\\01.基础平台\\JW.Base\\JW.Base.csproj": {
+                "projectPath": "F:\\项目\\新焙时\\JWBestPlatform\\03.开发\\01.基础平台\\JW.Base\\JW.Base.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -167,6 +174,12 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "dependencies": {
+            "sqlSugarCore": {
+              "target": "Package",
+              "version": "[5.0.0.15, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -182,24 +195,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "F:\\项目\\JWBestPlatform\\03.开发\\01.基础平台\\JW.Base\\JW.Base.csproj": {
+    "F:\\项目\\新焙时\\JWBestPlatform\\03.开发\\01.基础平台\\JW.Base\\JW.Base.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\项目\\JWBestPlatform\\03.开发\\01.基础平台\\JW.Base\\JW.Base.csproj",
+        "projectUniqueName": "F:\\项目\\新焙时\\JWBestPlatform\\03.开发\\01.基础平台\\JW.Base\\JW.Base.csproj",
         "projectName": "JW.Base",
-        "projectPath": "F:\\项目\\JWBestPlatform\\03.开发\\01.基础平台\\JW.Base\\JW.Base.csproj",
-        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "F:\\项目\\JWBestPlatform\\03.开发\\01.基础平台\\JW.Base\\obj\\",
+        "projectPath": "F:\\项目\\新焙时\\JWBestPlatform\\03.开发\\01.基础平台\\JW.Base\\JW.Base.csproj",
+        "packagesPath": "C:\\Users\\JQ-KF 05\\.nuget\\packages\\",
+        "outputPath": "F:\\项目\\新焙时\\JWBestPlatform\\03.开发\\01.基础平台\\JW.Base\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\JQ-KF 05\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -271,7 +284,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
         }
       }
     }

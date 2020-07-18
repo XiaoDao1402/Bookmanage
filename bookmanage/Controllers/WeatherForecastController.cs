@@ -8,6 +8,7 @@ using Microsoft.Extensions.Logging;
 namespace bookmanage.Controllers {
     [ApiController]
     [Route("[controller]")]
+
     public class WeatherForecastController : ControllerBase {
         private static readonly string[] Summaries = new[]
         {
@@ -16,6 +17,10 @@ namespace bookmanage.Controllers {
 
         private readonly ILogger<WeatherForecastController> _logger;
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="logger"></param>
         public WeatherForecastController(ILogger<WeatherForecastController> logger) {
             _logger = logger;
         }

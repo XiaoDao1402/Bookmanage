@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using JW.Base.Configuration;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -18,6 +19,17 @@ namespace bookmanage {
     public class Startup {
         public Startup(IConfiguration configuration) {
             Configuration = configuration;
+            
+            #region 配置
+            ConfigurationManager.Current.Configuration = new ConfigurationBuilder()
+                .SetBasePath(Directory.GetCurrentDirectory())
+#if DEBUG
+                .AddJsonFile("appsettings.Development.json")
+#else
+                .AddJsonFile("appsettings.json")
+#endif
+                .Build();
+            #endregion
         }
 
         public IConfiguration Configuration { get; }
@@ -88,7 +100,17 @@ namespace bookmanage {
             if (env.IsDevelopment()) {
                 app.UseDeveloperExceptionPage();
             }
+
+            #region 跨域
+            app.UseCors(builder => {
+                builder.AllowAnyMethod()
+                        .AllowAnyHeader()
+                        .AllowAnyOrigin();
+            });
+            #endregion
+
             app.UseSwagger();
+
             app.UseSwaggerUI(c => {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "图书管理服务接口");
                 // 访问Swagger的路由后缀
@@ -98,11 +120,6 @@ namespace bookmanage {
             app.UseHttpsRedirection();
 
             app.UseRouting();
-
-            // 开启认证
-            app.UseAuthentication();
-            // 开启鉴权
-            app.UseAuthorization();
 
             app.UseEndpoints(endpoints => {
                 endpoints.MapControllers();

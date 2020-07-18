@@ -9,7 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\JWBestPlatform\03.开发\01.基础平台\JW.Base\JW.Base.csproj" />
+    <ProjectReference Include="..\..\新焙时\JWBestPlatform\03.开发\01.基础平台\JW.Base\JW.Base.csproj" />
   </ItemGroup>
 
 </Project>
