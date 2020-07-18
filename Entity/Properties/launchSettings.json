@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Entity": {
+      "commandName": "Project",
+      "workingDirectory": "swagger"
+    }
+  }
+}
