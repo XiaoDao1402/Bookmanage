@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <script>
+      $(function() {
+        QueryBook();
+      });
+      // 查询
+      function QueryBook() {
+        $.ajax({
+          type: "GET",
+          url: "https://localhost:44385/api/Book/QueryBook",
+          success: function(data) {
+            var str =
+              "<tr><th>Id</th><th>书名</th><th>单价</th><th>创建时间</th><th>修改时间</th><th><button>新增</button></th></tr>";
+            for (var i = 0; i < data.length; i++) {
+              str +=
+                "<tr>" +
+                "<td>" +
+                data[i].bookId +
+                "</td>" +
+                "<td>" +
+                data[i].name +
+                "</td>" +
+                "<td>" +
+                data[i].price +
+                "</td>" +
+                "<td>" +
+                data[i].createDate +
+                "</td>" +
+                "<td>" +
+                data[i].modifyDate +
+                "</td>" +
+                "<td><button>编辑</button></td><td><button onclick='DeleteBook(bookId)'>删除</button></td >" +
+                "<tr>";
+            }
+            document.getElementById("bookTable").innerHTML = str;
+          }
+        });
+      }
+      // 删除
+      function DeleteBook() {
+        $.ajax({
+          type: "GET",
+          url: "https://localhost:44385/api/Book/DeleteBook?bookId="+bookId,
+          success: function(data) {
+
+          }
+        });
+      }
+    </script>
+  </head>
+  <body>
+    <div>
+      <div>
+        <!-- <button></button> -->
+        <table id="bookTable" style="border: 1px solid gray;"></table>
+      </div>
+    </div>
+  </body>
+</html>
