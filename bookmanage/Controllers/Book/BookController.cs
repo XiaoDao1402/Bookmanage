@@ -30,11 +30,12 @@ namespace BookManage.Controllers.Book{
         /// <param name="book"></param>
         /// <returns></returns>
         [HttpPost("AddBook")]
-        public void AddBook(BookEntity book)
+        public IActionResult AddBook(BookEntity book)
         {
             try
             {
                 bookBll.AddBook(book);
+                return Ok(1);
             }
             catch (Exception ex)
             {

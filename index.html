@@ -6,10 +6,41 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
     <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <style>
+      table,
+      table tr th,
+      table tr td {
+        border: 1px solid gray;
+      }
+      table {
+        width: 90vw;
+        min-height: 25px;
+        line-height: 25px;
+        text-align: center;
+        border-collapse: collapse;
+      }
+      input {
+        text-align: center;
+        border: none;
+      }
+    </style>
     <script>
       $(function() {
         QueryBook();
       });
+      // 日期格式转换
+      function ChangeDate(date) {
+        var date = new Date(date);
+        year = date.getFullYear();
+        month = date.getMonth() + 1;
+        day = date.getDate();
+        hours = date.getHours() + 8;
+        min = date.getMinutes();
+        sec = date.getSeconds();
+        var resultDate =
+          year + "-" + month + "-" + day + " " + hours + ":" + min + ":" + sec;
+        return resultDate;
+      }
       // 查询
       function QueryBook() {
         $.ajax({
@@ -17,26 +48,44 @@
           url: "https://localhost:44385/api/Book/QueryBook",
           success: function(data) {
             var str =
-              "<tr><th>Id</th><th>书名</th><th>单价</th><th>创建时间</th><th>修改时间</th><th><button>新增</button></th></tr>";
+              "<tr><th>Id</th><th>书名</th><th>单价</th><th>创建时间</th><th>修改时间</th><th><button onclick='AddBook()'>新增</button></th></tr>";
             for (var i = 0; i < data.length; i++) {
+              var createDate = ChangeDate(data[i].createDate);
+              var modifyDate = ChangeDate(data[i].modifyDate);
               str +=
                 "<tr>" +
                 "<td>" +
                 data[i].bookId +
                 "</td>" +
-                "<td>" +
-                data[i].name +
-                "</td>" +
-                "<td>" +
+                "<td><input type='text' onblur='UpdateBookName(this," +
                 data[i].price +
-                "</td>" +
-                "<td>" +
+                ',"' +
                 data[i].createDate +
+                '",' +
+                data[i].bookId +
+                ")' placeholder='" +
+                data[i].name +
+                "' value=''></td>" +
+                "<td><input type='text' onblur='UpdateBookPrice(this,\"" +
+                data[i].name +
+                '","' +
+                data[i].createDate +
+                '",' +
+                data[i].bookId +
+                ")' placeholder='" +
+                data[i].price +
+                "' value=''></td>" +
+                "<td>" +
+                createDate +
                 "</td>" +
                 "<td>" +
-                data[i].modifyDate +
+                modifyDate +
                 "</td>" +
-                "<td><button>编辑</button></td><td><button onclick='DeleteBook(bookId)'>删除</button></td >" +
+                "<td><button name='" +
+                data[i].bookId +
+                "' onclick='DeleteBook(" +
+                data[i].bookId +
+                ")'>删除</button></td >" +
                 "<tr>";
             }
             document.getElementById("bookTable").innerHTML = str;
@@ -44,12 +93,89 @@
         });
       }
       // 删除
-      function DeleteBook() {
+      function DeleteBook(bookId) {
         $.ajax({
           type: "GET",
-          url: "https://localhost:44385/api/Book/DeleteBook?bookId="+bookId,
+          url: "https://localhost:44385/api/Book/DeleteBook?bookId=" + bookId,
           success: function(data) {
-
+            console.log("删除成功", data);
+            QueryBook();
+          }
+        });
+      }
+      // 新增
+      function AddBook() {
+        var str =
+          "<tr>" +
+          "<td>" +
+          "</td>" +
+          "<td><input type='text' id='Name'>" +
+          "</td>" +
+          "<td><input type='text' id='Price'>" +
+          "</td>" +
+          "<td>" +
+          "</td>" +
+          "<td>" +
+          "</td>" +
+          "<td><button onclick='PreserveBook(Name.value,Price.value)'>保存</button></td>" +
+          "<tr>";
+        $("#bookTable").append(str);
+      }
+      // 保存
+      function PreserveBook(name, price) {
+        var price = parseFloat(price);
+        var date = new Date();
+        var param = {
+          Name: name,
+          Price: price,
+          CreateDate: date,
+          ModifyDate: date
+        };
+        var book = JSON.stringify(param);
+        $.ajax({
+          type: "POST",
+          url: "https://localhost:44385/api/Book/AddBook",
+          data: book,
+          dataType: "JSON",
+          contentType: "application/json;charset=UTF-8",
+          async: false,
+          success: function() {
+            console.log("保存成功");
+          }
+        });
+        QueryBook();
+      }
+      // 更新书名（修改）
+      function UpdateBookName(e, price, createDate, bookId) {
+        var name = e.value;
+        UpdateBook(bookId, name, price, createDate);
+        QueryBook();
+      }
+      // 更新图书价格（修改）
+      function UpdateBookPrice(e, name, createDate, bookId) {
+        var price = e.value;
+        UpdateBook(bookId, name, price, createDate);
+        QueryBook();
+      }
+      function UpdateBook(bookId, name, price, createDate) {
+        var price = parseFloat(price);
+        var date = new Date();
+        var param = {
+          Name: name,
+          Price: price,
+          CreateDate: createDate,
+          ModifyDate: date
+        };
+        var book = JSON.stringify(param);
+        $.ajax({
+          type: "POST",
+          url: "https://localhost:44385/api/Book/UpdateBook?bookId=" + bookId,
+          data: book,
+          dataType: "JSON",
+          contentType: "application/json;charset=UTF-8",
+          async: false,
+          success: function() {
+            console.log("更新成功");
           }
         });
       }
@@ -58,7 +184,7 @@
   <body>
     <div>
       <div>
-        <!-- <button></button> -->
+        <!-- <input type="text" value="123" ondblclick="" /> -->
         <table id="bookTable" style="border: 1px solid gray;"></table>
       </div>
     </div>
